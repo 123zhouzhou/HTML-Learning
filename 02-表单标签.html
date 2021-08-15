@@ -15,41 +15,47 @@
 			 method属性 → 传输数据所用的方法：get为明文传送；post为简单的加密传输 -->
 		<form action="某一个后台" method="post">
 			<!-- type="text"代表普通的输入框   placeholder属性可以设置用户的提醒文字 -->
-			用户名：<input type="text" placeholder="请输入用户名" name="" id="" value="" />
-			<br />
+			用户名：<input type="text" placeholder="请输入用户名" name="" id="" value="" /><br />
 			
 			<!-- 密码框 type="password" -->
-			密&nbsp;&nbsp;&nbsp;码：<input type="password" name="" id="" value="" />
-			<br />
+			密&nbsp;&nbsp;&nbsp;码：
+			<input type="password" placeholder="⚪⚪⚪" name="" id="" value="" /><br />
 			
 			<!-- 检查是否能实现单选效果；考虑用户体验(点击文字是否可以实现切换效果) -->
-			性别：<input type="radio" name="xb" id="boy"/><label for="boy">男</label>
+			性别：
+			<input type="radio" name="xb" id="boy" checked="checked"/><label for="boy">男</label>
 			<input type="radio" name="xb" id="girl" /><label for="girl">女</label>
 			<br />
 			
 			<!-- 复选框 标签<input />属性type=“checkbox”-->
-			爱好：<input type="checkbox" id="meal"><label for="meal">吃饭</label>
-			<input type="checkbox" id="sleep"><label for="sleep">睡觉</label>
-			<input type="checkbox" id="sing"><label for="sing">唱歌</label>
+			爱好：
+			<input type="checkbox" id="meal" checked="checked"/><label for="meal">吃饭</label>
+			<input type="checkbox" id="sleep" /><label for="sleep">睡觉</label>
+			<input type="checkbox" id="sing" /><label for="sing">唱歌</label>
 			<br />
 			
 			<!-- 下拉菜单<select></select>结构标签：要注意默认选项是否符合要求；总共的下拉可选数也符合要求 -->
 			你来自：
 			<select>
-				<option value ="">北京</option>
-				<option value ="">上海</option>
+				<option value ="" >北京</option>
+				<option value ="" selected="selected">上海</option>
 				<option value ="">广州</option>
 			</select>
 			<br />
 			
 			<!-- 文本域<textarea></textarea> 因为兼容性问题，程序员一般用CSS设置宽和高，不使用cols&rows设置
-			     右下角按钮要关闭，不允许用户自行改变大小-->
-			您的意见或建议：<textarea  placeholder="请填写您的反馈" cols="15" rows="15"></textarea>
+			     右下角按钮要关闭，不允许用户自行改变大小 -->
+			您的意见或建议：<textarea  placeholder="请填写您的反馈" cols="15" rows="15" /></textarea>
 			<br /><br />
-			<div>普通按钮：<input type="button" value="选择"></div><br />
-			<div>重置按钮：<input type="reset" value="重置"></div>
+			<div>普通按钮：<input type="button" value="选择" /></div><br />
 			
+			<!-- type=“reset”→重置按钮，要设置value属性键值对 此按钮的效果是重置页面中的表单数据(恢复默认值)而非清空 -->
+			<div>重置按钮：<input type="reset" value="重置" /></div><br />
+		
+		    <!-- 此按钮点击后会把表单中的数据上传到form标签中的action值对应的后台程序中 -->
+			<div>提交按钮：<input type="submit" value="提交" /></div>
 			
+			<div>
 		</form>
 	</body>
 </html>
